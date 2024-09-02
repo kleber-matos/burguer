@@ -5,49 +5,49 @@ import React, { useEffect, useState } from "react";
 import Router from "../src/Router";
 
 export default function App() {
-  const [pedido, setPedido] = useState([]);
-  const [nome, setNome] = useState("");
-  const [carne, setCarne] = useState("Bovido");
-  const [pao, setPao] = useState("Tradicional");
+  // const [pedido, setPedido] = useState([]);
+  // const [nome, setNome] = useState("");
+  // const [carne, setCarne] = useState("Bovido");
+  // const [pao, setPao] = useState("Tradicional");
 
-  const buscaDados = async () => {
-    try {
-      const dados = await axios.get("http://localhost:3001/");
-      setPedido(dados.data);
-      console.log(dados.data);
-      console.log("tudo certo");
-    } catch (err) {
-      setTimeout(() => {
-        alert(
-          "Provavelmente o Back-End não está rodando, tente entrar na pasta e usar o 'node server.mjs'"
-        );
-      }, 3000);
-    }
-  };
+  // const buscaDados = async () => {
+  //   try {
+  //     const dados = await axios.get("http://localhost:3001/");
+  //     setPedido(dados.data);
+  //     console.log(dados.data);
+  //     console.log("tudo certo");
+  //   } catch (err) {
+  //     setTimeout(() => {
+  //       alert(
+  //         "Provavelmente o Back-End não está rodando, tente entrar na pasta e usar o 'node server.mjs'"
+  //       );
+  //     }, 3000);
+  //   }
+  // };
 
-  const criarBurguer = () => {
-    if (nome == "") {
-      alert("Tente novamente!");
-    } else {
-      console.log("Criado!");
-      console.log(nome);
-      console.log(pao);
-      console.log(carne);
+  // const criarBurguer = () => {
+  //   if (nome == "") {
+  //     alert("Tente novamente!");
+  //   } else {
+  //     console.log("Criado!");
+  //     console.log(nome);
+  //     console.log(pao);
+  //     console.log(carne);
 
-      axios.post("http://localhost:3001/", {
-        nome: nome,
-        pao: pao,
-        carne: carne,
-      });
-      setTimeout(() => {
-        buscaDados();
-      }, 1000);
-    }
-  };
+  //     axios.post("http://localhost:3001/", {
+  //       nome: nome,
+  //       pao: pao,
+  //       carne: carne,
+  //     });
+  //     setTimeout(() => {
+  //       buscaDados();
+  //     }, 1000);
+  //   }
+  // };
 
-  useEffect(() => {
-    buscaDados();
-  }, []);
+  // useEffect(() => {
+  //   buscaDados();
+  // }, []);
 
   return (
     <>

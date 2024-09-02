@@ -14,7 +14,7 @@ export default function index() {
     } catch (err) {
       setTimeout(() => {
         alert(
-          "Provavelmente o Back-End não está rodando, tente entrar na pasta e usar o 'node server.mjs'"
+          "Provavelmente o Back-End não está rodando, tente entrar na pasta e usar o 'node server.mjs' 1234456667867"
         );
       }, 3000);
     }
